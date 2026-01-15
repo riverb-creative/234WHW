@@ -1,0 +1,26 @@
+{
+  "name": "234whw1",
+  "version": "1.0.0",
+  "description": "CS 234W HW1",
+  "homepage": "https://github.com/riverb-creative/CS234WHW#readme",
+  "bugs": {
+    "url": "https://github.com/riverb-creative/CS234WHW/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riverb-creative/CS234WHW.git"
+  },
+  "license": "ISC",
+  "author": "River",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.1",
+    "mongoose": "^9.1.2"
+  }
+}
