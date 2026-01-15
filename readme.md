@@ -6,13 +6,13 @@
 
 Dependencies & How To Install Them: 
 >    - express 
-        > - npm install express
+>        - npm install express
 >    - express-validator
-        > - npm install express-validator
+>         - npm install express-validator
 >    - dotenv
-        > - npm install dotenv
+>         - npm install dotenv
 >    - mongoose
-        > - npm install mongoose
+>         - npm install mongoose
 
 
 > [!IMPORTANT]
@@ -21,17 +21,17 @@ Dependencies & How To Install Them:
 > 2. Initialize node.js with _npm init_
 > 3. Install dependencies in node_modules folder with _npm install_
 > 4. Install Express with _npm install express_
-> 7. Install ejs with _npm install express-validator_
-> 8. Install dotenv with _npm install dotenv_
-> 9. Install mongoose with _npm install mongoose_
-> 10. To run the server and test it type _run node server.js_ or _npm start_
-> 11. Open your browser and type _http://localhost:3000_ into the URL to get to the root route
-    > - You will see a json message of _Welcome to Such Catchy Book Review App!_
-> 12. To see all the books in the database type _http://localhost:3000/books_ into the URL to get to the root route
-    > - You will again see a json message with all the books that have been added to the database
-> 13. To see all books for a specific genre type _http://localhost:3000/books/TheGenreYouWant_ into the URL to get to the root route
-    > - Ex. _http://localhost:3000/books/Fantasy_
-        > - You will see a json message with all the books that have a genre of _Fantasy_ 
+> 5. Install ejs with _npm install express-validator_
+> 6. Install dotenv with _npm install dotenv_
+> 7. Install mongoose with _npm install mongoose_
+> 8. To run the server and test it type _run node server.js_ or _npm start_
+> 9. Open your browser and type _http://localhost:3000_ into the URL to get to the root route
+>       * You will see a json message of _Welcome to Such Catchy Book Review App!_
+> 11. To see all the books in the database type _http://localhost:3000/books_ into the URL to get to the root route
+>     * You will again see a json message with all the books that have been added to the database
+> 12. To see all books for a specific genre type _http://localhost:3000/books/TheGenreYouWant_ into the URL to get to the root route
+>     * Ex. _http://localhost:3000/books/Fantasy_
+>       * You will see a json message with all the books that have a genre of _Fantasy_ 
 
 > [!NOTE]
 > How to test the POST method:
@@ -41,19 +41,19 @@ Dependencies & How To Install Them:
    > 4. Change the method to POST
    > 5. Change the URL _http://localhost:3000/books_
    > 6. In the _Headers_ tab, enter _Content-Type_ in the header section and _application/json_ in the value section
-   > 7. Go to the _Body_ tab, make sure it is on _JSON_ and enter something similar to what is listed below:
-        >   {
-            >   "title": "test",
-            >   "author": "test",
-            >   "genre": 
-                >   [
-                    >   "Paranormal",
-                    >   "Horror",
-                    >   "Fantasy"
-                >   ],
-            >   "releaseDate": "2019-10-30T00:00:00.000Z",
-            >   "aveStars": 9
-        >   }
+   > 7. Go to the _Body_ tab, make sure it is on _JSON_ and enter something similar to what is listed:
+>    `{
+>       "title": "test",
+>       "author": "test",
+>       "genre":
+>       [
+>       "Paranormal",
+>       "Horror",
+>       "Fantasy"
+>       ],
+>       "releaseDate": "2019-10-30T00:00:00.000Z",
+>       "aveStars": 9
+>       }`
         > - The title and author fields are required 
     > 8. Click the _Send_ button, you will get a response that the book related to the Id you entered in the URL has been updated
     > 9. Go to _http://localhost:3000/books_ in the browser to check that the book you selected has been added
