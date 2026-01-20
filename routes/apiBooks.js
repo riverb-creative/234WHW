@@ -2,7 +2,7 @@
  * userRouter.js
  * 
  * define the routes (method + path) the api responds to.
- * note that each path defined here assumes that /users has been typed in
+ * note that each path defined here assumes that /books has been typed in
  */
 
 //imports
