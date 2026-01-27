@@ -101,8 +101,9 @@ Dependencies & How To Install Them:
 >       * The book ID will be listed in the json message when you access _http://localhost:3000/books_
 >            * Example of book ID: _6965a84c45dc2b161d08098c_
    > 6. In the _Headers_ tab, make sure the _Content-Type_ in the header section and _application/json_ in the value section are **NOT** selected
-   > 7. Click the _Send_ button, you will get a response that the book related to the Id you entered in the URL has been deleted
-   > 8. Go to _http://localhost:3000/books_ in the browser to check that the book you selected has been deleted
+   >     * If you want to include the _Content-Type_ in the header section and _application/json_ in the value section just make sure that there is valid JSON data in the             body tab in ThunderClient or else it won't work!
+   > 8. Click the _Send_ button, you will get a response that the book related to the Id you entered in the URL has been deleted
+   > 9. Go to _http://localhost:3000/books_ in the browser to check that the book you selected has been deleted
 
 > Security Best-Practices Demonstrated
    > * Environment variables for secrets used for JSON Web Token and Mongo DB Atlas
