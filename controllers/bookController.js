@@ -27,7 +27,7 @@ exports.getBookByGenre = async(request, response) => {
             response.status(200).json(books);
         }
         catch (errMsg) {
-            response.status(400).json({error: "No such user or server error - " + errMsg});
+            response.status(400).json({error: "No such genre or server error - " + errMsg});
         }
     }
 }

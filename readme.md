@@ -1,8 +1,8 @@
 # CS 234W - Such Catchy Book Review App
 ## Author: River
-### Date: 01/26/2026
+### Date: 02/04/2026
 
-**Description:** CS 234W Term Project | building a book review Express API that connects to an external data store and demonstrates basic CRUD functionality
+**Description:** CS 234W Homework | Implementing integration testing with Jest & Supertest
 
 Dependencies & How To Install Them: 
 >    - express 
@@ -21,6 +21,12 @@ Dependencies & How To Install Them:
 >         - npm install helmet
 >    - jsonwebtoken
 >         - npm install jsonwebtoken
+>    - jest
+>         - npm install jest
+>    - supertest
+>         - npm install supertest
+>    - mongodb-memory-server
+>         - npm install mongodb-memory-server
 
 > [!IMPORTANT]
 > Instructions to run server with URLs to test routes:
@@ -140,7 +146,7 @@ Dependencies & How To Install Them:
 >              * At least ONE uppercase letter
 >              * At least ONE lowercase letter
 >              * At least ONE number
->              * At least ONE special character: [ ! @ # $ % ^ & * ( ) ]
+>              * At least ONE special character: _! @ # $ % ^ & * ( )_
 > 12. Click the _Send_ button, you will get a response that the user added was successful
 > 13. Go to _http://localhost:3000/users_ in the browser to check that the user you registered has been added
 > 14. To get an unsuccessful response follow steps 1 through 10 if anything was changed
@@ -156,3 +162,33 @@ Dependencies & How To Install Them:
 >              * No uppercase letters: an error response will appear with error message
 >              * No special characters: an error response will appear with an error message
 
+> [!IMPORTANT]
+> Error Handling HTTP Codes used in bookController.test.js & userController.test.js :
+> 1. 200, 201, 400, 401, and 500
+
+> [!IMPORTANT]
+>  Instructions to test bookController.test.js:
+> 1. Open the terminal and run _npx jest bookController.test.js_
+>        *This will only run the bookController.test.js
+> 2. To test both files you can run _npm test_
+> 3. The first test in bookController.test.js tests _that the bookId DOES NOT exist_, if the book id does not exist it will send a 500 HTTP Code
+> 4. The first test in bookController.test.js tests _that the bookId exists and it is deleted_, the test must first create a new book object, which then checks that it exists and sends a 201 HTTP code it then accesses the bookId and requests that this bookId be deleted and when it is deleted it will send a 200 HTTP code.
+
+> [!IMPORTANT]
+>  Instructions to test userController.test.js:
+> 1. Open the terminal and run _npx jest userController.test.js_
+>        *This will only run the userController.test.js
+> 2. To test both files run _npm test_
+> 3. The first test in userController.test.js tests _that new user is created_, if the user is unique and has all the required fields (usereName, email, and password) it will send a 200 HTTP code
+> 4. The second to fourth test in userController.test.js tests the unsuccessful users that are missing data including, but not limited to:
+>        * required fields of userName, email & password
+>        * password must haves:
+>                 * minimum of 12 character 
+>                 * at least ONE uppercase
+>                 * at least ONE lowercase
+>                 * at least ONE digit
+>                 * at least ONE special character _! @ # $ % ^ & * ( )_
+> 5. The fifth test verifies _that username exist_ and if so it will send the 200 HTTP code
+> 6. The sixth test verifies _that userName exists and password is correct for login_, the test first creates a new user info (userName, email, and password) if it is unique it will send a 201 HTTP code. The test then checks if the newly created userName and password exists, if it does it sends 201 HTTP code
+> 7. The seventh test verifies _the userName does not exist for login_, if it does not exist send a 401 HTTP code
+> 8. The seventh test verifies _the username exists and password is incorrect for login_, if it does not exist send a 401 HTTP code

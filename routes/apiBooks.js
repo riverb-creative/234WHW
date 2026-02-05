@@ -34,11 +34,12 @@ router.post("/", bookController.addBook);
 //method    =   DELETE
 //path      =   http://localhost:3000/books
 //response  =   remove book data from collection and return success message
-router.delete("/:bookId", authenticate, (request, response) => {
+/*router.delete("/:bookId", authenticate, (request, response) => {
     body("._id").trim().notEmpty().escape().withMessage("Book ID is required")
     bookController.deleteBook(request, response)
-});
+});*/
 
+router.delete("/:bookId", bookController.deleteBook);
 //method    =   PUT
 //path      =   http://localhost:3000/books
 //response  =   edit book data in collection and return success message

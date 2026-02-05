@@ -1,7 +1,7 @@
 /**-----------------------------
- * bookController.js 
+ * userController.js 
  * 
- * define all the functions needed to interact with the book collection
+ * define all the functions needed to interact with the user collection
  * in our database 
  * ----------------------------- */ 
 
@@ -41,11 +41,11 @@ exports.loginUser = async(request, response) => {
             { expiresIn: "0.58h"}
         );
 
-        response.json({ token });
+        response.status(200).json({ token });
     }
     catch (errorMsg) {
         response.status(500).json({
-            error: "Login failed. Please try again with correct credentials."
+            error: "Login failed. Please try again with correct credentials." + errorMsg
         });
     }
 }
@@ -72,7 +72,7 @@ exports.getUserByName = async(request, response) => {
         response.status(200).json(users);
     }
     catch (errMsg) {
-        response.status(500).json({ error: "Server error: " + errMsg});
+        response.status(404).json({ error: "Server error: " + errMsg});
     }
 }
 
